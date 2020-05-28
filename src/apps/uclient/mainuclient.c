@@ -493,7 +493,7 @@ int main(int argc, char **argv)
 		  SSL_CTX_set_cipher_list(root_tls_ctx[root_tls_ctx_num], csuite);
 		  root_tls_ctx_num++;
 #if TLSv1_2_SUPPORTED
-		  root_tls_ctx[root_tls_ctx_num] = SSL_CTX_new(TLSv1_2_client_method());
+		  root_tls_ctx[root_tls_ctx_num] = SSL_CTX_new(TLS_client_method());
 		  SSL_CTX_set_cipher_list(root_tls_ctx[root_tls_ctx_num], csuite);
 		  root_tls_ctx_num++;
 #endif

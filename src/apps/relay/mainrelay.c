@@ -3084,7 +3084,7 @@ static void openssl_load_certificates(void)
 		}
 #if TLSv1_2_SUPPORTED
 		if(!turn_params.no_tlsv1_2) {
-			set_ctx(&turn_params.tls_ctx_v1_2,"TLS1.2",TLSv1_2_server_method());
+			set_ctx(&turn_params.tls_ctx_v1_2,"TLS1.2",TLS_server_method());
 		}
 #endif
 #endif
